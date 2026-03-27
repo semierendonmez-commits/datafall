@@ -123,7 +123,7 @@ restart norns after installation (`SYSTEM > RESTART`) to compile the engine.
 
 ## how it works
 
-1. file read as raw bytes (up to 2MB)
+1. file read as raw bytes 
 2. bytes interpreted as PCM samples based on bit depth
 3. temporary stereo WAV written (mono = same data both channels)
 4. WAV loaded into SuperCollider buffer
