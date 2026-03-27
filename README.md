@@ -1,6 +1,5 @@
 # datafall
 
-*every file has a voice.*
 
 a binary sonification instrument for monome norns. load any file — code, images, PDFs, archives, anything — and hear its raw data as sound while watching its binary structure scroll across the screen.
 
