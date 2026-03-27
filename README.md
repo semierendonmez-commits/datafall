@@ -27,7 +27,7 @@ the OLED screen shows a real-time binary waterfall: each pixel represents one by
 ## installation
 
 ```
-;install https://github.com/ayso/datafall
+;install https://github.com/semierendonmez-commits/datafall
 ```
 
 restart norns after installation (`SYSTEM > RESTART`) to compile the engine.
