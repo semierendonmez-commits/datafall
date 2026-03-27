@@ -44,7 +44,7 @@ restart norns after installation (`SYSTEM > RESTART`) to compile the engine.
 | **E3** | lowpass filter (when LPF is on) |
 | **K2** | play / stop |
 | **K3** | open file browser |
-| **K1+K3** | toggle loop |
+| **K1+K3** | toggle loop (default ON)|
 
 ### SET page — settings
 
