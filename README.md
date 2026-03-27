@@ -30,7 +30,7 @@ the OLED screen shows a real-time binary waterfall: each pixel represents one by
 ## installation
 
 ```
-;install https://github.com/ayso/datafall
+;install https://github.com/semierendonmez-commits/datafall
 ```
 
 restart norns after installation (`SYSTEM > RESTART`) to compile the engine.
@@ -152,6 +152,6 @@ no format awareness — just raw binary as sound. the "music" comes from the str
 
 ## credits
 
-built by [@ayso](https://llllllll.co/u/ayso)
+built by [@SEMI](https://llllllll.co/u/semi)
 
 inspired by [binary waterfall](https://nimaid.itch.io/binary-waterfall) by ella jameson and the data sonification research community.
