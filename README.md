@@ -43,7 +43,7 @@ restart norns after installation (`SYSTEM > RESTART`) to compile the engine.
 
 | control | function |
 |---------|----------|
-| **E1** | page select (FALL / SET / INFO) |
+| **E1** | page select (FALL / SET ) |
 | **K2** | play / stop |
 | **K3** | open file browser (FALL/INFO) or apply settings (SET) |
 | **K1+K3** | toggle loop |
