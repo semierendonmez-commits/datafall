@@ -1,6 +1,6 @@
 -- datafall
 -- v1 @SEMI
--- llllllll.co/t/datafall
+-- https://llllllll.co/t/datafall-binary-waterfall-for-norns
 --
 -- binary waterfall sonification
 -- hear and see any file as sound
