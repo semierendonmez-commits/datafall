@@ -1,5 +1,5 @@
 -- datafall
--- v1.2 @ayso
+-- v1 @SEMI
 -- llllllll.co/t/datafall
 --
 -- binary waterfall sonification
