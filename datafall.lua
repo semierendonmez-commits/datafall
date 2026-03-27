@@ -22,7 +22,6 @@ local MAX_BYTES = 2 * 1024 * 1024
 
 local screen_dirty = true
 local k1_held = false
-local in_menu = false
 local raw_bytes = {}
 local raw_count = 0
 local loading = false
@@ -374,7 +373,7 @@ local function build_params()
   params:set_action("df_sr", function(v) ui.sample_rate = v end)
 
   params:add_option("df_vis", "visual mode",
-    {"normal", "inverted", "log", "threshold", "1-bit"}, 1)
+    {"normal", "inverted", "threshold", "1-bit"}, 1)
   params:set_action("df_vis", function(v) ui.visual_mode = v; screen_dirty = true end)
 
   params:add_trigger("df_apply", ">> APPLY settings")
@@ -402,7 +401,8 @@ function init()
   clock.run(function()
     while true do
       clock.sleep(1 / 15)
-      if not in_menu and (screen_dirty or ui.playing or ui.loading) then
+      -- _menu.mode: norns system flag, true when menu is visible
+      if not _menu.mode and (screen_dirty or ui.playing or ui.loading) then
         local ok, err = pcall(ui.redraw)
         if not ok then print("datafall draw: " .. tostring(err)) end
         screen_dirty = false
@@ -466,7 +466,7 @@ function enc(n, d)
         ui.sample_rate = util.clamp(ui.sample_rate + d, 1, 3)
         params:set("df_sr", ui.sample_rate)
       elseif c == 4 then
-        ui.visual_mode = util.clamp(ui.visual_mode + d, 1, 5)
+        ui.visual_mode = util.clamp(ui.visual_mode + d, 1, 4)
         params:set("df_vis", ui.visual_mode)
       elseif c == 5 then
         ui.lpf_on = not ui.lpf_on
@@ -485,11 +485,8 @@ end
 function key(n, z)
   if n == 1 then
     k1_held = (z == 1)
-    in_menu = (z == 1)  -- assume menu when K1 held
     return
   end
-  -- any other key press while K1 held = combo, not menu
-  if k1_held then in_menu = false end
   if z ~= 1 then return end
 
   if browser.active then
