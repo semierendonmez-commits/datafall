@@ -1,6 +1,6 @@
 # datafall
 
-a waterfall binary sonification instrument for monome norns. load any file — code, images, PDFs, archives, anything — and hear its raw data as sound while watching its binary structure scroll across the screen.
+waterfall binary sonification for norns. load any file — code, images, PDFs, archives, anything — and hear its raw data as sound while watching its binary structure scroll across the screen.
 
 ---
 
